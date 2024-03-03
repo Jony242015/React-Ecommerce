@@ -1,11 +1,11 @@
 import React, { Fragment } from 'react';
 import Header from '../src/componentes/layout/Header';
 import Navigation from './componentes/layout/Navigation';
-import Alumnos from './componentes/clientes/Clientes';
+import Clientes from './componentes/clientes/Clientes';
 import Calificaciones from './componentes/calificaciones/Calificaciones';
 import Carreras from './componentes/carreras/Carreras';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import NuevoAlumno from './componentes/clientes/NuevoCliente';
+import NuevoCliente from './componentes/clientes/NuevoCliente';
 
 function App() {
   return (
@@ -20,8 +20,8 @@ function App() {
           <main class="caja-contenido col-9">
 
             <Routes>
-              <Route path="/" element={<Alumnos />} />
-              <Route path="/nuevo-cliente" element={<NuevoAlumno />} />
+              <Route path="/" element={<Clientes />} />
+              <Route path="/nuevo-cliente" element={<NuevoCliente />} />
               <Route path="/carreras" element={<Carreras />} />
               <Route path="/calificaciones" element={<Calificaciones />} />
             </Routes>
