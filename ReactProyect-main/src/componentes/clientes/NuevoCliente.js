@@ -5,7 +5,7 @@ function NuevoCliente(){
     
     const[carreras, guardarCarrera] =useState ([]);
     const ConsultarAPI = async() => {
-        const CarreraConsulta = await ClienteAxios.get('/carreras');
+        const CarreraConsulta = await ClienteAxios.get('/clientes');
     
         guardarCarrera(CarreraConsulta.data);
         console.log(carreras);
