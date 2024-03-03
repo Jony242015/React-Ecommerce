@@ -62,8 +62,8 @@ function NuevoCliente(){
                 </div>
 
                 <div class="campo">
-                    <label>Edad:</label>
-                    <input type="number" placeholder="Edad Cliente" name="edad" onChange={actualizarState}/>
+                    <label>Direccion:</label>
+                    <input type="text" placeholder="Edad Cliente" name="edad" onChange={actualizarState}/>
                 </div>
 
                 <div class="enviar">
