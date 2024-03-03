@@ -15,6 +15,16 @@ function Clientes() {
         ConsultarAPI();
     }, []);
 
+    const deleteCliente = async (id) => {
+        try {
+            const response = await ClienteAxios.delete('/clientes/'+id+'');
+            alert("Cliente Eliminado");
+            window.location.reload();
+        } catch (error) {
+            console.error(error);
+        }
+    };
+
     return (
         <Fragment>
             <h2>Clientes</h2>
@@ -35,7 +45,7 @@ function Clientes() {
                                 <i class="fas fa-pen-alt"></i>
                                 Editar Cliente
                             </a>
-                            <button type="button" class="btn btn-rojo btn-eliminar">
+                            <button type="button" class="btn btn-rojo btn-eliminar" onClick={() => deleteCliente(cliente.ClienteID)}>
                                 <i class="fas fa-times"></i>
                                 Eliminar Cliente
                             </button>

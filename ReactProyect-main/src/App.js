@@ -2,8 +2,8 @@ import React, { Fragment } from 'react';
 import Header from '../src/componentes/layout/Header';
 import Navigation from './componentes/layout/Navigation';
 import Clientes from './componentes/clientes/Clientes';
-import Calificaciones from './componentes/calificaciones/Calificaciones';
-import Carreras from './componentes/carreras/Carreras';
+import Pedidos from './componentes/pedidos/Pedidos';
+import Productos from './componentes/productos/Productos';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import NuevoCliente from './componentes/clientes/NuevoCliente';
 
@@ -22,8 +22,8 @@ function App() {
             <Routes>
               <Route path="/" element={<Clientes />} />
               <Route path="/nuevo-cliente" element={<NuevoCliente />} />
-              <Route path="/carreras" element={<Carreras />} />
-              <Route path="/calificaciones" element={<Calificaciones />} />
+              <Route path="/productos" element={<Productos />} />
+              <Route path="/pedidos" element={<Pedidos />} />
             </Routes>
 
           </main>
