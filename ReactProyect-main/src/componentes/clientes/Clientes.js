@@ -27,7 +27,7 @@ function Clientes() {
                     <li class="cliente">
                         <div class="info-cliente">
                             <p class="nombre">{cliente.Nombre}</p>
-                            <p class="carrera">{cliente.Correo}</p>
+                            <p class="correo">{cliente.Correo}</p>
                             <p>{cliente.Direccion}</p>
                         </div>
                         <div class="acciones">
