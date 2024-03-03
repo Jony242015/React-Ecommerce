@@ -3,7 +3,7 @@ import ClienteAxios from '../../config/axios';
 import {Link} from 'react-router-dom';
 
 function Clientes() {
-    const [alumnos, guardarClientes] = useState([]);
+    const [clientes, guardarClientes] = useState([]);
     const ConsultarAPI = async () => {
         const ClientesConsulta = await ClienteAxios.get('/clientes');
 
@@ -46,4 +46,4 @@ function Clientes() {
         </Fragment>
     )
 }
-export default Alumnos;
+export default Clientes;
