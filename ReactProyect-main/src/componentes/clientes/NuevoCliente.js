@@ -3,12 +3,12 @@ import ClienteAxios from '../../config/axios';
 
 function NuevoCliente(){
     
-    const[carreras, guardarCarrera] =useState ([]);
+    const[pedidos, guardarCarrera] =useState ([]);
     const ConsultarAPI = async() => {
-        const CarreraConsulta = await ClienteAxios.get('/clientes');
+        const PedidoConsulta = await ClienteAxios.get('/pedidos');
     
-        guardarCarrera(CarreraConsulta.data);
-        console.log(carreras);
+        guardarCarrera(PedidoConsulta.data);
+        console.log(pedidos);
     
     }
     useEffect ( ()=>{
@@ -33,7 +33,10 @@ function NuevoCliente(){
 
     const AgregarCliente = e =>{
         e.preventDefault();
-        ClienteAxios.post('/clientes', cliente).then(res=>{console.log(res);});
+        ClienteAxios.post('/clientes', cliente).then(res=>{
+            console.log(res);
+            alert("Cliente Guardado");window.location.reload();
+        });
     }
 
     const validarCliente = ()=>{
@@ -58,12 +61,12 @@ function NuevoCliente(){
             
                 <div class="campo">
                     <label>Correo:</label>
-                    <input type="email" placeholder="Email Cliente" name="email" onChange={actualizarState}/>
+                    <input type="email" placeholder="Email Cliente" name="correo" onChange={actualizarState}/>
                 </div>
 
                 <div class="campo">
                     <label>Direccion:</label>
-                    <input type="text" placeholder="Edad Cliente" name="edad" onChange={actualizarState}/>
+                    <input type="text" placeholder="Edad Cliente" name="direccion" onChange={actualizarState}/>
                 </div>
 
                 <div class="enviar">
